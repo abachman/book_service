@@ -400,3 +400,78 @@ OgpAdXNlZHsGOwdG--dbf9bbca8dd42714aaa33ea095552e1f33c35fcd
 Rendering template within layouts/books
 Rendering books/show
 Completed in 0.01500 (66 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01500 (100%) | 200 OK [http://10.0.2.7/books/3]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:47:35) [POST]
+  Session ID: 4a32ccaa7c540134512c487f13ae17de
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.059223)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:47:35', 'Hello, World!', 'Anonymous', '2008-06-11 03:47:35')[0m
+Completed in 0.13202 (7 reqs/sec) | Rendering: 0.06277 (47%) | DB: 0.05922 (44%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:47:35) [POST]
+  Session ID: bba94d120aa83a315ed68e65a5c55a30
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00802 (124 reqs/sec) | Rendering: 0.00119 (14%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:50:58) [POST]
+  Session ID: d753a340933c1ebf2812e7ef141af3dc
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.000388)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:50:58', 'Hello, World!', 'Anonymous', '2008-06-11 03:50:58')[0m
+Completed in 0.03935 (25 reqs/sec) | Rendering: 0.02923 (74%) | DB: 0.00039 (0%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:50:58) [POST]
+  Session ID: cef78e9c184b6da379243d8e9593376c
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00709 (140 reqs/sec) | Rendering: 0.00048 (6%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:09) [POST]
+  Session ID: 608faa667a54b1afd22c4fdb24b9ebd6
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mBook Create (0.000368)[0m   [0mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:56:09', 'Hello, World!', 'Anonymous', '2008-06-11 03:56:09')[0m
+Completed in 0.01290 (77 reqs/sec) | Rendering: 0.00115 (8%) | DB: 0.00037 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:09) [POST]
+  Session ID: 17740704877b1dec45a985f86c1403d9
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00727 (137 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:31) [POST]
+  Session ID: a304db961014974816a1c1c76479cf40
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.000349)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:56:31', 'Hello, World!', 'Anonymous', '2008-06-11 03:56:31')[0m
+Completed in 0.01387 (72 reqs/sec) | Rendering: 0.00413 (29%) | DB: 0.00035 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:31) [POST]
+  Session ID: e23cba69133bd2756bfe37a51e58cb76
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00704 (142 reqs/sec) | Rendering: 0.00050 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:57:11) [POST]
+  Session ID: 829b4522fbd97729fff27a637ce14938
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mBook Create (0.000311)[0m   [0mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:57:11', 'Hello, World!', 'Anonymous', '2008-06-11 03:57:11')[0m
+Completed in 0.01307 (76 reqs/sec) | Rendering: 0.00388 (29%) | DB: 0.00031 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:57:12) [POST]
+  Session ID: 69e7355a71fba831a827897e5f31bb38
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00691 (144 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
