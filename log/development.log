@@ -478,3 +478,19 @@ Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:57:12) [POST]
 WARNING: Can't mass-assign these protected attributes: id
 Completed in 0.00691 (144 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
 >>>>>>> 583eb0b693f064aded42aaa9b494bd3eacc48c1b:log/development.log
+
+
+Processing InfoController#properties (for 192.168.1.100 at 2008-06-14 17:59:08) [GET]
+  Session ID: 79473bba66263c2c1357b258bebba883
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+Completed in 0.09894 (10 reqs/sec) | Rendering: 0.00054 (0%) | DB: 0.00000 (0%) | 500 Internal Server Error [http://192.168.1.103/rails/info/properties]
+
+
+Processing BooksController#index (for 192.168.1.100 at 2008-06-14 17:59:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--9fe600dc4165ec36ca0922bf7e8f1e46ccb7a63f
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.002986)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.02955 (33 reqs/sec) | Rendering: 0.01337 (45%) | DB: 0.00299 (10%) | 200 OK [http://192.168.1.103/books/]
