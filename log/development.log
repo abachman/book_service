@@ -1,0 +1,480 @@
+<<<<<<< HEAD:log/development.log
+=======
+  [4;36;1mSQL (0.015000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.078000)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.094000)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBooks (20080608165526)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.140000)[0m   [0mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255) DEFAULT NULL NULL, "author" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080608165526')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list("books")[0m
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:02:04) [GET]
+  Session ID: 249dd6c7acd99f03b88d20c1c1577823
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#new (for 10.0.2.7 at 2008-06-08 13:02:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--9fe600dc4165ec36ca0922bf7e8f1e46ccb7a63f
+  Parameters: {"action"=>"new", "controller"=>"books"}
+Rendering template within layouts/books
+Rendering books/new
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.01500 (31%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/new]
+
+
+Processing BooksController#create (for 10.0.2.7 at 2008-06-08 13:02:28) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d3919b65f46f9e74a201dca8e1a42dae9efc9d00", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"The Dispossed", "author"=>"Ursula K LeGuin"}}
+  [4;35;1mBook Create (0.015000)[0m   [0mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-08 17:02:28', 'The Dispossed', 'Ursula K LeGuin', '2008-06-08 17:02:28')[0m
+Redirected to http://10.0.2.7:3000/books/1
+Completed in 0.10900 (9 reqs/sec) | DB: 0.01500 (13%) | 302 Found [http://10.0.2.7/books]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:02:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNCb29rIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--dbf9bbca8dd42714aaa33ea095552e1f33c35fcd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/1]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:02:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNCb29rIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdU--c7653b7cba7f8442600bb575be9eee31de23288a
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01600 (51%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:02:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/1]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:02:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.01600 (34%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#new (for 10.0.2.7 at 2008-06-08 13:02:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"new", "controller"=>"books"}
+Rendering template within layouts/books
+Rendering books/new
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/new]
+
+
+Processing BooksController#create (for 10.0.2.7 at 2008-06-08 13:03:06) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d3919b65f46f9e74a201dca8e1a42dae9efc9d00", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"The Shining", "author"=>"Stephen King"}}
+  [4;36;1mBook Create (0.000000)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-08 17:03:07', 'The Shining', 'Stephen King', '2008-06-08 17:03:07')[0m
+Redirected to http://10.0.2.7:3000/books/2
+Completed in 0.15700 (6 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://10.0.2.7/books]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:03:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNCb29rIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--dbf9bbca8dd42714aaa33ea095552e1f33c35fcd
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.03200 (31 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/2]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:03:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNCb29rIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdU--c7653b7cba7f8442600bb575be9eee31de23288a
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.016000)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.04600 (21 reqs/sec) | Rendering: 0.01500 (32%) | DB: 0.01600 (34%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:03:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"format"=>"json", "action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" [0m
+Completed in 0.03200 (31 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 406 Not Acceptable [http://10.0.2.7/books.json]
+
+
+Processing ApplicationController#index (for 10.0.2.7 at 2008-06-08 13:03:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/books/.json" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ApplicationController#index (for 10.0.2.7 at 2008-06-08 13:03:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/books/.xml" with {:method=>:get}):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:03:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"format"=>"xml", "action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" [0m
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.11000 (78%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books.xml]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:05:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"format"=>"xml", "action"=>"index", "controller"=>"books"}
+  [4;35;1mBook Load (0.015000)[0m   [0mSELECT * FROM "books" [0m
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.03200 (50%) | DB: 0.01500 (23%) | 200 OK [http://10.0.2.7/books.xml]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:05:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"show", "id"=>"put", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" WHERE ("books"."id" = 0) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Book with ID=put):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1379:in `find_one'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1362:in `find_from_ids'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:537:in `find'
+    /app/controllers/books_controller.rb:16:in `show'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:05:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 1) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/1]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:05:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.14100 (81%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:05:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"books"}
+  [4;35;1mBook Load (0.000000)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 2) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.01500 (66 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/2]
+
+
+Processing BooksController#index (for 10.0.2.7 at 2008-06-08 13:10:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"index", "controller"=>"books"}
+  [4;36;1mBook Load (0.000000)[0m   [0;1mSELECT * FROM "books" [0m
+Rendering template within layouts/books
+Rendering books/index
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books]
+
+
+Processing BooksController#new (for 10.0.2.7 at 2008-06-08 13:26:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"new", "controller"=>"books"}
+Rendering template within layouts/books
+Rendering books/new
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.01600 (34%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/new]
+
+
+Processing BooksController#new (for 10.0.2.7 at 2008-06-08 13:27:39) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"action"=>"new", "controller"=>"books"}
+Rendering template within layouts/books
+Rendering books/new
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://10.0.2.7/books/new]
+
+
+Processing BooksController#create (for 10.0.2.7 at 2008-06-08 13:28:16) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--7ab1b128edfbbf6c5cf19a29fca845cb1ec8754b
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d3919b65f46f9e74a201dca8e1a42dae9efc9d00", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"The Left Hand of Darkness", "author"=>"Ursula K LeGuin"}}
+  [4;36;1mBook Create (0.000000)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-08 17:28:16', 'The Left Hand of Darkness', 'Ursula K LeGuin', '2008-06-08 17:28:16')[0m
+Redirected to http://10.0.2.7:3000/books/3
+Completed in 0.17200 (5 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://10.0.2.7/books]
+
+
+Processing BooksController#show (for 10.0.2.7 at 2008-06-08 13:28:17) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlN2JjYmM5OTA4NTc2Y2Q0YzdiNTY4OTJhMDk1NGY2
+MjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNCb29rIHdhcyBzdWNjZXNzZnVsbHkgY3JlYXRlZC4G
+OgpAdXNlZHsGOwdG--dbf9bbca8dd42714aaa33ea095552e1f33c35fcd
+  Parameters: {"action"=>"show", "id"=>"3", "controller"=>"books"}
+  [4;35;1mBook Load (0.015000)[0m   [0mSELECT * FROM "books" WHERE ("books"."id" = 3) [0m
+Rendering template within layouts/books
+Rendering books/show
+Completed in 0.01500 (66 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.01500 (100%) | 200 OK [http://10.0.2.7/books/3]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:47:35) [POST]
+  Session ID: 4a32ccaa7c540134512c487f13ae17de
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.059223)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:47:35', 'Hello, World!', 'Anonymous', '2008-06-11 03:47:35')[0m
+Completed in 0.13202 (7 reqs/sec) | Rendering: 0.06277 (47%) | DB: 0.05922 (44%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:47:35) [POST]
+  Session ID: bba94d120aa83a315ed68e65a5c55a30
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00802 (124 reqs/sec) | Rendering: 0.00119 (14%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:50:58) [POST]
+  Session ID: d753a340933c1ebf2812e7ef141af3dc
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.000388)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:50:58', 'Hello, World!', 'Anonymous', '2008-06-11 03:50:58')[0m
+Completed in 0.03935 (25 reqs/sec) | Rendering: 0.02923 (74%) | DB: 0.00039 (0%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:50:58) [POST]
+  Session ID: cef78e9c184b6da379243d8e9593376c
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00709 (140 reqs/sec) | Rendering: 0.00048 (6%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:09) [POST]
+  Session ID: 608faa667a54b1afd22c4fdb24b9ebd6
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mBook Create (0.000368)[0m   [0mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:56:09', 'Hello, World!', 'Anonymous', '2008-06-11 03:56:09')[0m
+Completed in 0.01290 (77 reqs/sec) | Rendering: 0.00115 (8%) | DB: 0.00037 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:09) [POST]
+  Session ID: 17740704877b1dec45a985f86c1403d9
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00727 (137 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:31) [POST]
+  Session ID: a304db961014974816a1c1c76479cf40
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mBook Create (0.000349)[0m   [0;1mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:56:31', 'Hello, World!', 'Anonymous', '2008-06-11 03:56:31')[0m
+Completed in 0.01387 (72 reqs/sec) | Rendering: 0.00413 (29%) | DB: 0.00035 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:56:31) [POST]
+  Session ID: e23cba69133bd2756bfe37a51e58cb76
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00704 (142 reqs/sec) | Rendering: 0.00050 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:57:11) [POST]
+  Session ID: 829b4522fbd97729fff27a637ce14938
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>"Hello, World!", "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mBook Create (0.000311)[0m   [0mINSERT INTO "books" ("updated_at", "title", "author", "created_at") VALUES('2008-06-11 03:57:11', 'Hello, World!', 'Anonymous', '2008-06-11 03:57:11')[0m
+Completed in 0.01307 (76 reqs/sec) | Rendering: 0.00388 (29%) | DB: 0.00031 (2%) | 201 Created [http://localhost/books.xml]
+
+
+Processing BooksController#create (for 127.0.0.1 at 2008-06-10 23:57:12) [POST]
+  Session ID: 69e7355a71fba831a827897e5f31bb38
+  Parameters: {"format"=>"xml", "action"=>"create", "controller"=>"books", "book"=>{"title"=>nil, "author"=>"Anonymous", "id"=>"", "created_at"=>nil}}
+WARNING: Can't mass-assign these protected attributes: id
+Completed in 0.00691 (144 reqs/sec) | Rendering: 0.00052 (7%) | DB: 0.00000 (0%) | 422 Unprocessable Entity [http://localhost/books.xml]
+>>>>>>> 583eb0b693f064aded42aaa9b494bd3eacc48c1b:log/development.log
